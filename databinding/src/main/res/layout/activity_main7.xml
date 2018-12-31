@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+	
+	<!--app:layout_constraintHorizontal_chainStyle="spread|spread_inside|packed"-->
+	
+	
+	<!--Guideline辅助线
+	Guideline可以用来辅助布局，通过Guideline能创建出一条条的水平线或者垂直线，
+	该线不会显示到界面上，但是能够利用这些线条来添加约束去完成界面的布局。-->
+	<android.support.constraint.Guideline
+			android:id="@+id/guideline_h"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			app:layout_constraintGuide_percent="0.5"/>
+	
+	<android.support.constraint.Guideline
+			android:id="@+id/guideline_v"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			app:layout_constraintGuide_percent="0.5"/>
+	
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="辅助线定位"
+			app:layout_constraintLeft_toLeftOf="@id/guideline_v"
+			app:layout_constraintTop_toTopOf="@id/guideline_h"/>
+</android.support.constraint.ConstraintLayout>
