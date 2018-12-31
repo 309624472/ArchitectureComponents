@@ -1,30 +1,36 @@
 package me.francis.lifecycle
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
-import org.jetbrains.anko.alert
-import org.jetbrains.anko.noButton
-import org.jetbrains.anko.toast
-import org.jetbrains.anko.yesButton
+import me.francis.lifecycle.lifecycle.LifecycleActivity
+import me.francis.lifecycle.origin.OriginActivity
 
+/**
+ * Lifecycle 生命周期
+ * LifecycleOwner 生命周期所有者
+ * LifecycleRegistry 弱引用持有LifecycleObserver，将LifecycleOwner的状态同步给LifecycleObserver
+ * LifecycleDispatcher
+ *
+ * LifecycleObserver 生命周期观察者
+ * DefaultLifecycleObserver
+ */
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var openAlertBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        openAlertBtn = findViewById<Button>(R.id.openAlertBtn)
-        MainService.startMainService(this)
 
-        openAlertBtn.setOnClickListener {
-            alert {
-                alert("Hi, I'm Francis", "Have you tried turning it off and on again?") {
-                    yesButton { toast("yes") }
-                    noButton { toast("no") }
-                }.show()
-            }
+        setContentView(R.layout.activity_main)
+        val button1 = findViewById<Button>(R.id.button1)
+        val button2 = findViewById<Button>(R.id.button2)
+        button1.setOnClickListener {
+            val intent = Intent(this, OriginActivity::class.java)
+            startActivity(intent)
+        }
+        button2.setOnClickListener {
+            val intent = Intent(this, LifecycleActivity::class.java)
+            startActivity(intent)
         }
     }
 }

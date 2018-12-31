@@ -2,15 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="me.francis.lifecycle">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
-    <uses-feature android:name="android.hardware.location.gps"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
+            android:name=".App"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
@@ -21,13 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
-        <service
-                android:name=".MainService"
-                android:enabled="true"
-                android:process=":mainProcess"
-                android:exported="false">
-        </service>
+        <activity android:name=".origin.OriginActivity">
+        </activity>
+        <activity android:name=".lifecycle.LifecycleActivity">
+        </activity>
     </application>
 
 </manifest>
