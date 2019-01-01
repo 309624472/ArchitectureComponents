@@ -1,7 +1,8 @@
-package me.francis.viewmodel
+package me.francis.room.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import me.francis.room.R
 
 class MainActivity : AppCompatActivity() {
 
