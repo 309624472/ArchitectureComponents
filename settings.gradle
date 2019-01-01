@@ -1,1 +1,1 @@
-include ':app', ':workmanager', ':lifecycle', ':viewmodel', ':databinding'
+include ':app', ':workmanager', ':lifecycle', ':viewmodel', ':databinding', ':constraintlayout'

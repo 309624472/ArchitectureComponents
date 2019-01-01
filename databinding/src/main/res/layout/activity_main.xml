@@ -3,6 +3,25 @@
                                              xmlns:app="http://schemas.android.com/apk/res-auto"
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
-
+                                             android:layout_height="match_parent"
+                                             tools:context=".MainActivity">
+	
+	<Button
+			android:id="@+id/java_btn"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:text="toJavaSampleActivity"
+			android:textAllCaps="false"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"/>
+	
+	<Button
+			android:id="@+id/kotlin_btn"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:text="toKotlinActivity"
+			android:textAllCaps="false"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@+id/java_btn"/>
 </android.support.constraint.ConstraintLayout>

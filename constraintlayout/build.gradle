@@ -8,7 +8,7 @@ android {
 
 
     defaultConfig {
-        applicationId "me.francis.databinding"
+        applicationId "me.francis.constraintlayout"
         minSdkVersion build_versions.min_sdk
         targetSdkVersion build_versions.target_sdk
         versionCode 1
@@ -23,10 +23,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    dataBinding {
-        enabled = true
     }
 
     compileOptions {

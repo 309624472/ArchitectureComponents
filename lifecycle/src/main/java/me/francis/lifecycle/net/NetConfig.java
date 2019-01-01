@@ -9,5 +9,5 @@ public class NetConfig {
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
-    public static String Sample_post = "http://***";
+    public static String Sample_post = "http://192.168.31.52:8081/sample_post/upload/json";
 }

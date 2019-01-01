@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+	<data>
+		
+		<variable
+				name="userEntity"
+				type="me.francis.databinding.java.model.UserEntity"/>
+		
+		<variable
+				name="addressEntity"
+				type="me.francis.databinding.java.model.AddressEntity"/>
+	</data>
+	
+	<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	             xmlns:tools="http://schemas.android.com/tools"
+	             android:layout_width="match_parent"
+	             android:layout_height="match_parent"
+	             tools:context=".java.TestFragment">
+		
+		<android.support.constraint.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+			
+			<TextView
+					android:id="@+id/name_tv"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@{userEntity.name}"
+					android:textColor="#000000"
+					android:textSize="16sp"
+					app:layout_constraintLeft_toLeftOf="parent"/>
+			
+			<TextView
+					android:id="@+id/addr_tv"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@{userEntity.addr}"
+					android:textColor="#000000"
+					android:textSize="16sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/name_tv"/>
+			
+			<TextView
+					android:id="@+id/age_tv"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@{String.valueOf(userEntity.age)}"
+					android:textColor="#000000"
+					android:textSize="16sp"
+					app:layout_constraintLeft_toLeftOf="parent"
+					app:layout_constraintTop_toBottomOf="@+id/addr_tv"/>
+		</android.support.constraint.ConstraintLayout>
+	
+	</FrameLayout>
+</layout>

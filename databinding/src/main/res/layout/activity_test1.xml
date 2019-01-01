@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+	
+	<data>
+		
+		<variable
+				name="userEntity"
+				type="me.francis.databinding.java.model.UserEntity"/>
+		
+		<variable
+				name="addressEntity"
+				type="me.francis.databinding.java.model.AddressEntity"/>
+	</data>
+	
+	<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+	                                             xmlns:tools="http://schemas.android.com/tools"
+	                                             android:layout_width="match_parent"
+	                                             android:layout_height="match_parent"
+	                                             tools:context=".java.Test1Activity">
+		
+		<TextView
+				android:id="@+id/testTv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				app:layout_constraintLeft_toLeftOf="parent"/>
+		
+		<TextView
+				android:id="@+id/name_tv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@{userEntity.name}"
+				android:textColor="#000000"
+				android:textSize="16sp"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/testTv"/>
+		
+		<TextView
+				android:id="@+id/addr_tv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@{userEntity.addr}"
+				android:textColor="#000000"
+				android:textSize="16sp"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/name_tv"/>
+		
+		<TextView
+				android:id="@+id/age_tv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@{String.valueOf(userEntity.age)}"
+				android:textColor="#000000"
+				android:textSize="16sp"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/addr_tv"/>
+		
+		
+		<TextView
+				android:id="@+id/province_tv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@{addressEntity.province}"
+				android:textColor="#000000"
+				android:textSize="16sp"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/age_tv"/>
+		
+		<TextView
+				android:id="@+id/city_tv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@{addressEntity.city}"
+				android:textColor="#000000"
+				android:textSize="16sp"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/province_tv"/>
+		
+		<TextView
+				android:id="@+id/detail_tv"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@{addressEntity.detail}"
+				android:textColor="#000000"
+				android:textSize="16sp"
+				app:layout_constraintLeft_toLeftOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/city_tv"/>
+	</android.support.constraint.ConstraintLayout>
+</layout>
