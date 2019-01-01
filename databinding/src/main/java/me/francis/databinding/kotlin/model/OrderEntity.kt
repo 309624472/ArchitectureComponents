@@ -1,17 +1,18 @@
-package com.feng.databinding_sample.kotlin.model
+package me.francis.databinding.kotlin.model
 
 import android.os.Parcel
 import android.os.Parcelable
 
 class OrderEntity(
-        var orderId: String,
-        var status: String,
-        var price: String
+    var orderId: String,
+    var status: String,
+    var price: String
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
-            parcel.readString(),
-            parcel.readString(),
-            parcel.readString()) {
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString()
+    ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

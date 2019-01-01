@@ -3,7 +3,7 @@ package me.francis.databinding
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
-import com.feng.databinding_sample.kotlin.KotlinSampleActivity
+import me.francis.databinding.kotlin.KotlinSampleActivity
 import me.francis.databinding.java.JavaSampleActivity
 
 class MainActivity : AppCompatActivity() {

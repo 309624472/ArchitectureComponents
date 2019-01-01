@@ -1,4 +1,4 @@
-package com.feng.databinding_sample.kotlin.extension
+package me.francis.databinding.kotlin.extension
 
 import android.support.annotation.IdRes
 import android.support.v4.app.Fragment

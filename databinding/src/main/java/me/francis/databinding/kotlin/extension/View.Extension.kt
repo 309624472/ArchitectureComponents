@@ -1,4 +1,4 @@
-package com.feng.databinding_sample.kotlin.extension
+package me.francis.databinding.kotlin.extension
 
 import android.support.design.widget.Snackbar
 import android.text.Editable
